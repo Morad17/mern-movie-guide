@@ -1,6 +1,5 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom"
 
-import Navbar from './components/Navbar';
 import Footer from './components/Footer'
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -19,8 +18,6 @@ function App() {
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/freeComponent" element={<FreeComponent />} />
           <Route element={<ProtectedRoutes />} >
-            <Route path="/my-blogs" element={<MyBlogs />}/>
-            <Route path="/blogs" element={<AllBlogs />}/>
             <Route exact path="/authComponent" element={<AuthComponent />} />
           </Route>
         </Routes>

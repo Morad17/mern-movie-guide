@@ -16,11 +16,10 @@ const Home = () => {
             .catch((err)=> {
                 console.log(err);
             })
-
+        }
         useEffect(()=> {
             getAllMoviesData()
         }, [])
-    }
 
   return (
     <div className='home'>
