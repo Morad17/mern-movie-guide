@@ -14,12 +14,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} /> 
-          <Route exact path="/login" element={<Login />} /> 
-          <Route exact path="/register" element={<Register />} />
-          <Route exact path="/freeComponent" element={<FreeComponent />} />
+          {/* <Route exact path="/login" element={<Login />} />  */}
+          {/* <Route exact path="/register" element={<Register />} /> */}
+          {/* <Route exact path="/freeComponent" element={<FreeComponent />} />
           <Route element={<ProtectedRoutes />} >
             <Route exact path="/authComponent" element={<AuthComponent />} />
-          </Route>
+          </Route> */}
         </Routes>
       </BrowserRouter>
     </div>

@@ -9,15 +9,16 @@ const Home = () => {
     const getAllMoviesData = () => {
         axios.get(process.env.REACT_APP_MOVIES_URL)
             .then((res) => {
-                const movieData = res.data.results
-                getMovieData(movieData)
-                console.log(movieData)
+                const result = res.data.results
+                getMovieData(result)
+                console.log(result)
             })
             .catch((err)=> {
-                console.log(err);
+                err = new Error()
             })
         }
-        useEffect(()=> {
+        
+    useEffect(()=> {
             getAllMoviesData()
         }, [])
 
@@ -25,7 +26,7 @@ const Home = () => {
     <div className='home'>
         <div className="all-movies">
             {
-                movieData?.map((movie, index)=> {return <MovieCard movie={movie} key={index} />})
+               movieData ? movieData.map((movie, key)=> {return <MovieCard movie={movie} key={key} />}) : <div className="">Loading</div>
             }
         </div>
     </div>
